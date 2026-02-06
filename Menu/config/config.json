@@ -1,0 +1,45 @@
+{
+    "app": {
+    "title": "Shout out",
+    "subtitle": "Personaliza y autoriza para generar tu URL.",
+    "brandLabel": "Shout out"
+  },
+  "base": {
+    "baseUrlLabel": "URL base del widget",
+    "baseUrlPlaceholder": "https://cscheems.github.io/shout-out/",
+    "defaultBaseUrl": "https://cscheems.github.io/shout-out/"
+  },
+  "sections":[
+        {
+            "title": "Posicionamiento",
+            "description": "Posición de salida del clip",
+            "uiSection": false,
+            "fields": [
+                
+                {
+                    "type": "select",
+                    "id": "position1",
+                    "label": "Posición Vertical",
+                    "param": "position1",
+                    "default": "top",
+                    "options": [
+                        { "value": "top", "label": "Arriba" },
+                        { "value": "bottom", "label": "Abajo" }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "id": "position2",
+                    "label": "Posición horizontal",
+                    "param": "position2",
+                    "default": "left",
+                    "options": [
+                        { "value": "left", "label": "Izquierda" },
+                        { "value": "center", "label": "Centro" },
+                        { "value": "right", "label": "Derecha" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
