@@ -7,11 +7,13 @@ const $ = (sel) => document.querySelector(sel);
 // ELEMENTS
 // ===============================
 const els = {
-  widgetUrl: $("#widgetUrlInput"),
-  copyBtn: $("#btnWidgetUrl"),
-  statusPill: $("#statusPill"),
-  countPill: $("#countPill"),
-  sectionsMount: document.querySelector(".left"),
+    appTitle: $("#appTitle"),
+    appSubtitle: $("#appSubtitle"),
+    widgetUrl: $("#widgetUrlInput"),
+    copyBtn: $("#btnWidgetUrl"),
+    statusPill: $("#statusPill"),
+    countPill: $("#countPill"),
+    sectionsMount: document.querySelector(".left"),
 };
 
 // ===============================
@@ -276,6 +278,9 @@ async function init() {
   const res = await fetch("./config/config.json", { cache: "no-store" });
   schema = await res.json();
   console.debug("Schema: ", schema);
+
+  els.appTitle.textContent = schema.app?.title ?? "Configuración";
+  els.appSubtitle.textContent = schema.app?.subtitle ?? "";
   
   setDefaultState();
   renderSections();
